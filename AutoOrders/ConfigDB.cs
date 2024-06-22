@@ -10,7 +10,7 @@ namespace AutoOrders
     {
         private const string HOST = "localhost";
         private const string USERNAME = "postgres";
-        private const string PASSWORD = "2648";
+        private const string PASSWORD = "0000";
         private const string DATABASE = "auto";
 
         public static string CON_STR => $"Host={HOST};Username={USERNAME};Password={PASSWORD};Database={DATABASE}";
