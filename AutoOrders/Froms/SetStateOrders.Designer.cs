@@ -46,7 +46,7 @@
             this.dataGridViewOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Location = new System.Drawing.Point(12, 11);
-            this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.Name = "dataGridViewClients";
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewOrders.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewOrders.Size = new System.Drawing.Size(883, 300);
@@ -106,7 +106,7 @@
             this.Controls.Add(this.dataGridViewOrders);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SetStateOrders";
-            this.Text = "Order Manager";
+            this.Text = "Заявки на менеджера";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

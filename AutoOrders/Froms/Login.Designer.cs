@@ -91,7 +91,7 @@
             this.Controls.Add(this.LoginText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Вход";
             this.ResumeLayout(false);
             this.PerformLayout();
 

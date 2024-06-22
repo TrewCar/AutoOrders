@@ -107,22 +107,40 @@ namespace AutoOrders
 
         private void buttonCreateOrder_Click(object sender, EventArgs e)
         {
-            InputClient();
-            Order order = new Order();
+            if (string.IsNullOrEmpty(textPhoneClient.Text))
+            {
+                MessageBox.Show("Введите номер и нажмите на кнопку найти");
+                return;
+            }
+            try
+            {
+                InputClient();
+                Order order = new Order();
 
-            order.Salon = (Salon)comboBoxSalon.SelectedItem;
-            order.Menedger = (MenedgerUser)comboBoxResponsible.SelectedItem;
+                order.Salon = (Salon)comboBoxSalon.SelectedItem;
+                order.Menedger = (MenedgerUser)comboBoxResponsible.SelectedItem;
 
-            order.TypeVizit = (string)comboBoxTypeVizit.SelectedItem;
-            order.How_found = (string)comboBoxInfoSource.SelectedItem;
+                order.TypeVizit = (string)comboBoxTypeVizit.SelectedItem;
+                order.How_found = (string)comboBoxInfoSource.SelectedItem;
 
-            order.BrandCar = (BrandCar)comboBoxBrand.SelectedItem;
-            order.ModelCar = (ModelCar)comboBoxModel.SelectedItem;
-            order.ColorCar = (ColorCar)comboBoxColorCar.SelectedItem;
+                order.BrandCar = (BrandCar)comboBoxBrand.SelectedItem;
+                order.ModelCar = (ModelCar)comboBoxModel.SelectedItem;
+                order.ColorCar = (ColorCar)comboBoxColorCar.SelectedItem;
 
-            order.Client = this.client;
+                order.Client = this.client;
 
-            order.Create();
+                order.Create();
+            }
+            catch
+            {
+                MessageBox.Show(
+                    "Найден дупликат по номеру, наждмите на кнопку 'Найти', " +
+                    "чтобы подставить ID клиента с данным номером. " +
+                    "Или некоторые поля пусты у клиента");
+                return;
+            }
+            MessageBox.Show("Успешно");
+            this.Close();
         }
         private void InputClient()
         {

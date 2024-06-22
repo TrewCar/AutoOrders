@@ -31,6 +31,7 @@
             this.buttonFormMenedger = new System.Windows.Forms.Button();
             this.buttonFormOrder = new System.Windows.Forms.Button();
             this.buttonListOrder = new System.Windows.Forms.Button();
+            this.buttonListUsers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonFormMenedger
@@ -66,17 +67,29 @@
             this.buttonListOrder.UseVisualStyleBackColor = true;
             this.buttonListOrder.Click += new System.EventHandler(this.buttonListOrder_Click);
             // 
+            // buttonListUsers
+            // 
+            this.buttonListUsers.Enabled = false;
+            this.buttonListUsers.Location = new System.Drawing.Point(12, 99);
+            this.buttonListUsers.Name = "buttonListUsers";
+            this.buttonListUsers.Size = new System.Drawing.Size(196, 23);
+            this.buttonListUsers.TabIndex = 3;
+            this.buttonListUsers.Text = "Список клиентов";
+            this.buttonListUsers.UseVisualStyleBackColor = true;
+            this.buttonListUsers.Click += new System.EventHandler(this.buttonListUsers_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 108);
+            this.ClientSize = new System.Drawing.Size(219, 132);
+            this.Controls.Add(this.buttonListUsers);
             this.Controls.Add(this.buttonListOrder);
             this.Controls.Add(this.buttonFormOrder);
             this.Controls.Add(this.buttonFormMenedger);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Main";
-            this.Text = "Main";
+            this.Text = "Главная форма";
             this.ResumeLayout(false);
 
         }
@@ -86,5 +99,6 @@
         private System.Windows.Forms.Button buttonFormMenedger;
         private System.Windows.Forms.Button buttonFormOrder;
         private System.Windows.Forms.Button buttonListOrder;
+        private System.Windows.Forms.Button buttonListUsers;
     }
 }

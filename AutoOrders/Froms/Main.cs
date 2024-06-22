@@ -15,16 +15,19 @@ namespace AutoOrders
         public Main()
         {
             InitializeComponent();
+            buttonFormMenedger.Enabled = false;
+            buttonFormOrder.Enabled = false;
+            buttonListOrder.Enabled = false;
+            buttonListUsers.Enabled = false;
+
             switch (Session.Role) {
                 case 1:
-                    buttonFormMenedger.Enabled = false;
                     buttonFormOrder.Enabled = true;
                     buttonListOrder.Enabled = true;
+                    buttonListUsers.Enabled = true;
                     break;
                 case 2:
                     buttonFormMenedger.Enabled = true;
-                    buttonFormOrder.Enabled = false;
-                    buttonListOrder.Enabled = false;
                     break;
             }
         }
@@ -48,6 +51,14 @@ namespace AutoOrders
         private void buttonListOrder_Click(object sender, EventArgs e)
         {
             var form = new ListOrders();
+            form.FormClosed += OnFormClosed;
+            form.Show();
+            this.Hide(); // Hide the login form
+        }
+
+        private void buttonListUsers_Click(object sender, EventArgs e)
+        {
+            var form = new ListClients();
             form.FormClosed += OnFormClosed;
             form.Show();
             this.Hide(); // Hide the login form

@@ -46,7 +46,7 @@
             this.dataGridViewOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Location = new System.Drawing.Point(12, 12);
-            this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.Name = "dataGridViewClients";
             this.dataGridViewOrders.ReadOnly = true;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewOrders.RowsDefaultCellStyle = dataGridViewCellStyle2;
